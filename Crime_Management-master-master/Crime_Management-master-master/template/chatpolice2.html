@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.body23 {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  float: left;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+  float: right;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: transparant;
+   color: black;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+   
+
+<button  onclick="window.location.href = 'chatpolice';">back</button>
+<div class="body23">
+<h2>Chat Messages</h2>
+
+{% for i in fmg %}
+           <div class="container darker" style="width: 400px;">
+  
+   {{bnname}} BRANCH
+  <br>
+  <span class="time-left"><strong>{{i.dchatt}}</strong><br>   {{i.date}},{{i.time_h_m_s}}</span>
+</div>
+{% endfor %}
+{% for i in tmg %}
+<div class="container" style="width: 400px;  ">
+ 
+  {{bbna}} 
+  BRANCH
+   <p>{{i.ddchat}}</p>
+   <span class="time-left"><strong>{{i.dchatt}}</strong><br>   {{i.date}},{{i.time_h_m_s}}</span>
+</div>
+{% endfor %}
+
+
+
+
+<div class="footer">
+    <form action="chatreg" method="post">
+      {% csrf_token %}
+        <input type="hidden" name="bib" value="{{bnname}}">
+        <input type="hidden" name="to" value="{{bbna}}">
+    <textarea name="dchatt" placeholder="CHAT FROM HERE" style="color: black ; width: 60%"></textarea>
+    <input type="submit" value="Send">
+    </form>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+crime
+management
+fileupload----criminals detailed upload by public
+        value=1  is requested document show accept
+        value=2 is requested document show accepted the otherbranch
+        value =3 is finished the document
+        
