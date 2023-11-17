@@ -1,0 +1,386 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Crime Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Crime Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="{%static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" media="all">
+    <link href="{%static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="{%static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- Slider -->
+    <div class="w3-banner-info-w3ltd position-relative">
+        <!-- header -->
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <h1><a class="navbar-brand" href="index">Crime
+
+                        </a></h1>
+                    <button class="navbar-toggler ml-lg-auto ml-sm-5 bg-light" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="ml-lg-5 navbar-nav mr-lg-auto">
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="index">Home</a>
+                            </li>
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="add_complaint">Add Complaint</a>
+                            </li>
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="view_my_complaints">View Complaint</a>
+                            </li>
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="add_feedback">Add Feedback</a>
+                            </li>
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="view_feedback">View Feedback</a>
+                            </li>
+
+                            <li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="{% url 'crime:view_news2' %}">View News</a>
+                            </li>
+                        <!--<li class="nav-item active  mr-lg-4 mt-lg-0 mt-sm-4 mt-3">
+                                <a href="{% url 'crime:view_fir' %}">View Fir</a>
+                            </li>>
+                        -->
+                            <li class="nav-item dropdown mr-lg-4 my-lg-0 my-sm-4 my-3">
+                               
+                                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a href="Add_Complaint.jsp">Add Complaint</a>
+                                    <a href="#">Add Missing Persons</a>
+                                    <a href="#">View Complaint Status</a>
+                                    <a href="#">Add burglar</a>
+                                </div>-->
+                            </li>
+                         
+                        </ul>
+                            <ul>
+                                <li class="nav-item dropdown mr-lg-4 my-lg-0 my-sm-4 my-3 text-uppercase font-weight-bold d-block">Welcome {{fn}}</li>
+                            </ul>
+                            <button type="button" class="btn w3ls-btn text-uppercase font-weight-bold d-block" data-toggle="modal"
+                            aria-pressed="false">
+                                <a href="Run_Here" style="color: black;">Logout</a>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+        <div class="slider">
+            <ul class="rslides" id="slider">
+                <li>
+                    <div class="d-flex banner-w3pvt-bg1 common-bg">
+                        <div class="d-flex mx-auto align-items-center justify-content-center flex-column">
+                            <div class="bnr-w3pvt">
+                                <h3>Government Of India</h3>
+                                <div class="d-flex justify-content-between bnr-sub-txt align-items-center">
+                                    <span></span>
+                                    <p class="text-uppercase text-white">The responsible person can use this</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--<div class="row justify-content-between bnr-form-w3ls">
+                                <div class="col-lg-12">
+                                    <h4>our country our rule. we surrender our soul for us country.</h4>
+                                </div>
+                                <div class="col-lg-8">
+                                    
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex banner-w3pvt-bg2 common-bg">
+                        <div class="d-flex mx-auto align-items-center justify-content-center flex-column">
+                            <div class="bnr-w3pvt">
+                                <h3>Government Of India</h3>
+                                <div class="d-flex justify-content-between bnr-sub-txt align-items-center">
+                                    <span></span>
+                                    <p class="text-uppercase text-white">The responsible person can use this</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--<div class="row justify-content-between bnr-form-w3ls">
+                                <div class="col-lg-12">
+                                     <h4>our country our rule. we surrender our soul for us country.</h4>
+                                </div>
+                               <div class="col-lg-8">
+                                    
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex banner-w3pvt-bg3 common-bg">
+                        <div class="d-flex mx-auto align-items-center justify-content-center flex-column">
+                            <div class="bnr-w3pvt">
+                                <h3>Government Of India</h3>
+                                <div class="d-flex justify-content-between bnr-sub-txt align-items-center">
+                                    <span></span>
+                                    <p class="text-uppercase text-white">The responsible person can use this</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--<div class="row justify-content-between bnr-form-w3ls">
+                                <div class="col-lg-12">
+                                     <h4>our country our rule. we surrender our soul for us country.</h4>
+                                </div>
+                               <div class="col-lg-8">
+                                    
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //Slider -->
+    <!--partners  -->
+    <div class="w3ltdits-partners bg-theme" id="partners">
+        <div class="container pt-4">
+            <div class="title-wthree text-center">
+                <h3 class="w3ltd-title">
+                    find the one that?s right for you.
+                </h3>
+                <span></span>
+            </div>
+            <ul class="list-unstyled py-md-5 py-3 partners-icon text-center">
+                <li>
+                    <span class="fa fa-lastfm-square" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="fa fa-meanpath" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="fa fa-behance-square" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="fa fa-cc-discover" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="fa fa-cc-stripe" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="fa fa-cc-jcb" aria-hidden="true"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //partners -->
+
+    <!-- job roles -->
+    <div class="wthreepvt-pos py-md-5 py-5" id="positions">
+        <div class="container py-lg-5">
+            <div class="wthreepvt-pos-row row  text-center">
+                
+                <div class="col-lg-4 col-sm-6 wthreepvt-pos-grids  border-left border-right my-sm-0 my-5">
+                    <div class="p-md-5 p-sm-3" onclick="window.location.href = 'Add_Complaint';" style=" cursor: pointer;">
+                        <span class="fa fa-suitcase" aria-hidden="true"></span>
+                        <h4 class="mt-2 mb-3">Criminal Complaint</h4>
+                        <p>A criminal complaint is a court document that accuses or charges a suspect with committing a specific crime</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wthreepvt-pos-grids">
+                    <div class="p-md-5 p-sm-3" onclick="window.location.href = 'Complaintstatus';" style=" cursor: pointer;">
+                        <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+                        <h4 class="mt-2 mb-3"> Criminal Complaint Status</h4>
+                        <p>The information displayed on this site is based upon the data made available by the consumer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wthreepvt-pos-row border-top row text-center pb-lg-5 pt-md-0 pt-5 mt-md-0 mt-sm-5 mt-4">
+                <div class="col-lg-4 col-sm-6 wthreepvt-pos-grids">
+                    <div class="p-md-5 p-sm-3 col-label" onclick="window.location.href = 'AddMissing';" style=" cursor: pointer;">
+                        <span class="fa fa-thumb-tack" aria-hidden="true"></span>
+                        <h4 class="mt-2 mb-3">Missing Complaints</h4>
+                        <p>A Missing complaint is a court document that accuses or charges a suspect with committing a specific crime</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 wthreepvt-pos-grids mt-lg-0 mt-md-3 border-left border-right pt-sm-0 pt-5">
+                    <div class="p-md-5 p-sm-3 col-label" onclick="window.location.href = 'missingstatus';" style=" cursor: pointer;">
+                        <span class="fa fa-external-link" aria-hidden="true"></span>
+                        <h4 class="mt-2 mb-3">Missing Complaints Status</h4>
+                        <p>The information displayed on this site is based upon the data made available by the consumer.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wthreepvt-pos-grids pt-md-0 pt-5">
+                    <div class="p-md-5 p-sm-3 col-label" onclick="window.location.href = 'criminalview';" style=" cursor: pointer;">
+                        <span class="fa fa-cog" aria-hidden="true"></span>
+                        <h4 class="mt-2 mb-3">Criminals</h4>
+                        <p>A criminal is someone who breaks the law. If you're a murderer, thief, or tax cheat, you're a criminal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //job roles -->
+    <!-- services bottom -->
+    <section class="bg-theme position-relative" id="services-bot">
+        <div class="container-fluid px-0">
+            <div class="title-sec-w3layouts_pvt text-center">
+                <span class="title-wthree text-white">a world full of possibilities</span>
+                <h4 class="w3layouts_pvt-head">allowing you to expand quickly.</h4>
+            </div>
+            <img src="{%static  'images/crime.jpg' %}" alt="" class="img-fluid">
+            <div class="row head-row-home mx-0">
+                <div class="offset-5"></div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-md-6 service-title my-sm-5 my-4">
+                            <h4 class="home-title text-white">Criminal Complaint</h4>
+                            <p class="sec-4">A criminal complaint is a court document 
+                                that accuses or charges a suspect with committing a
+                                specific crime.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-title my-md-5">
+                            <h4 class="home-title text-white">Missing Complaints</h4>
+                            <p class="sec-4">A Missing complaint is a court document that 
+                                accuses or charges a suspect with 
+                                committing a specific crime.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-title mt-md-0 mt-sm-5 mt-4">
+                            <h4 class="home-title text-white">Complaint Status</h4>
+                            <p class="sec-4">The information displayed on this site is
+                                based upon the data made available
+                                by the consumer.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-title mt-md-0 mt-sm-5 mt-4">
+                            <h4 class="home-title text-white">Criminals</h4>
+                            <p class="sec-4">A criminal is someone who breaks 
+                                the law. If you're a murderer, thief, 
+                                or tax cheat, you're a criminal.
+                            </p>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="offset-2"></div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- /Footer -->
+    <div class="cpy-right text-center py-4">
+        <p class="text-dark">� 2020 Crime. All rights reserved | Design by
+            
+        </p>
+    </div>
+    
+    <!-- //register modal -->
+    <!-- js -->
+    <script src="{%static 'js/jquery-2.2.3.min.js' %}"></script>
+    <!-- Slider-JavaScript -->
+    <script src="{%static 'js/responsiveslides.min.js' %}"></script>
+    <script>
+        $(function () {
+            $("#slider, #slider1").responsiveSlides({
+                auto: true,
+                nav: false,
+                speed: 1500,
+                namespace: "callbacks",
+                pager: true,
+            });
+        });
+    </script>
+    <!-- //Slider-JavaScript -->
+    <!-- script for password match -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- script for password match -->
+    <!-- //js -->
+    {% if meg %}
+    <script>
+
+          // display string message
+    
+        alert( "{{meg}}" ); // display python variable
+    
+    </script>
+    {% endif %}
+    <script src="{%static 'js/move-top.js' %}"></script>
+    <script src="{%static 'js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            }
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="{%static 'js/SmoothScroll.min.js' %}"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

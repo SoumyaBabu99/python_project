@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <style>
+    body{
+      background-image: url("{% static 'images/hero-bg.jpg' %}");
+    }
+  </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="height: 868px; width: 650px; background:#592720;  margin-left: 30%; margin-top: 1%; border-radius: 15px; box-shadow: 7px 7px 7px; color: white;">
+        <h1 style="margin-left: 25%; color: white;">Create Your Post</h1>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 3%;">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" style="width: 60%; margin-left: 20%;" name="title">
+              </div>
+             
+           
+           
+              {% comment %} <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Company Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Company Name" style="width: 60%; margin-left: 20%;" name="cname">
+              </div> {% endcomment %}
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" style="margin-left: 20%;">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 60%; margin-left: 20%;" name="description"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Tag</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Tag" style="width: 60%; margin-left: 20%;" name="tag">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Enter Date</label>
+                <input type="datetime-local" class="form-control" id="exampleFormControlInput1" placeholder="Enter Date" style="width: 60%; margin-left: 20%;" name="date">
+              </div>
+              
+              {% comment %} <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;"> Confirm Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirm Password" style="width: 60%; margin-left: 20%;" name="cpassword">
+              </div> {% endcomment %}
+              <button type="submit" class="btn btn-danger" style="margin-left: 40%; width:18%;">Add</button>
+        </form>
+
+    </div>
+</body>
+</html>

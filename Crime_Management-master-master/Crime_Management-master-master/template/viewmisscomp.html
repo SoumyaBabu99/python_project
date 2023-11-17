@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Crime Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Crime Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+  
+    <style>
+
+.body23 {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+</style>
+</head>
+<body>
+<button  onclick="window.location.href = 'policehome';">Back</button>
+<div class="body23">
+{% for i in co %}
+<div class="container">
+ 
+  <p><strong>Name: </strong>{{i.firstname}} {{i.lastname}}</p>
+ <p> <strong>Area:</strong> {{i.missedarea}}</p>
+  
+  <span class="time-right"><strong style="color: blue;">Email: </strong>{{i.Email}}<br><strong style="color: blue;">Mobile No: </strong>{{i.perno}}</span>
+
+</div>
+
+    {% endfor %}
+
+
+</div>
+
+
+</body>
+</html>
+

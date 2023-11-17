@@ -1,0 +1,11 @@
+Generic
+generic id a django inbuilt view parant class 
+they are advanced set of built in views that are 
+
+classes provide by generic
+
+1.CreatView:it is a view that is used for creating an instance/object
+2.ListView:it is a view that is used to list all instance 
+3.UpdateView:it is a view that is used for editing annexisting object and saving changes  
+4.DeleteView:it is a view that is used to delete an existing object
+5.DetailsView:it is used to get a single instance
