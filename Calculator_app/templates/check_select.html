@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body bgcolor='yellow'>
+        <center>
+    <h1>REGISTRATION FORM</h1>
+    <form method="post" action="">{% csrf_token %}  
+        <label>Name</label> 
+        <input type="text"  name="fname" placeholder="username"><br> <br> 
+        <label>Language</label>
+        <input type="checkbox" name="Malayalam">Malayalam
+        <input type="checkbox" name="English">English 
+        <input type="checkbox" name="Hindi">Hindi<br><br>
+        <label>State</label>
+        <select name="state">
+            <option>--Select--</option>
+            <option value="kerala">Kerala</option>
+            <option value="tamil nadu">Tamil Nadu</option>
+            <option value="Karnataka">Karnataka</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="clear">
+    </center>
+    </body>
+</html>

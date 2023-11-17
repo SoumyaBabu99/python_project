@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <center>
+       <form method="post">{% csrf_token %}
+        {% comment %} {{ form.as_p }} {% endcomment %}
+        <label> F-Name</label> 
+        <input type="text"  name="first_name" placeholder="first name" ><br> <br>
+        <label>l-Name</label>
+        <input type="text"  name="last_name" placeholder="last name" ><br> <br>
+        <label>username</label>
+        <input type="text" name="username" placeholder="username" ><br><br>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="abcd@gmail.com"><br><br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="password"><br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset">
+
+        
+        <script src="" async defer></script>
+       </form>
+    </center>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <table border=5>
+            <tr>
+                    <th>ID</th>i
+                    <th>audioname</th>j
+                    <th>audiofile</th>k
+                    <th>videoname</th>l
+                    <th>videofile</th>m
+                    <th>pdfname</th>n
+                    <th>pdffile</th> o 
+                    <th>update</th>  
+            </tr>
+
+        
+
+
+        {% for i,j,k,l,m,n,o in data %}
+        <tr>
+            <td>{{i}}</td>
+            <td>{{j}}</td>
+            <td><audio controls><source src="{% static k %}" width="200px" height="200px"></audio></td>
+            <td>{{l}}</td>
+            <td><video controls src="{% static m %}" width="250px" height="200px"></td>
+            
+            <td>{{n}}</td>
+            <td><a href="{%static o %}" width="200px" height="200px" download>click here</a></td>
+            <td><a href="http://127.0.0.1:8000/Calculator_app/filesedit/{{i}}" class="btn btn-primary">update data</a></td>
+            
+
+        </tr> 
+  
+        
+
+        {% endfor %}
+    </table>
+
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>

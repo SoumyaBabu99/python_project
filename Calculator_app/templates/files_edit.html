@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body bgcolor="yellow">
+        <form method='post' enctype="multipart/form-data">{% csrf_token %}  
+        <center>
+        <h1>Edit Files</h1><br><br>
+        <label>Audio File Name:</label>
+        <input type="text" name="audioname" placeholder=" Audio File Name"value="{{data.audioname}}"><br><br>
+        <label>Audio File </label>
+        <input type="file" name="audiofile" placeholder="Upload file" value="{{data.audiofile}}" ><br><br>
+        <label>Video File Name:</label>
+        <input type="text" name="videoname" placeholder=" Video File Name" value="{{data.videoname}}" ><br><br>
+        <label>Video File </label>
+        <input type="file" name="videofile" placeholder="Upload file"  value="{{data.videofile}}"><br><br>
+        <label>PDF File Name:</label>
+        <input type="text" name="pdfname" placeholder=" PDF File Name"  value="{{data.pdfname}}"><br><br>
+        <label>PDF File </label>
+        <input type="file" name="pdffile" placeholder="Upload file"  value="{{data.pdffile}}"><br><br>
+
+        <input type="submit" value="update">
+        <input type="reset">
+        <script src="" async defer></script>
+        </center>
+    </form>
+    </body>
+</html>
+
+
+
+
+{% comment %} enctype:it stands for encription type which is used to encript file fiels in html form {% endcomment %}

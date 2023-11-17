@@ -1,0 +1,80 @@
+<!-- fom is the most commomn way for a user to communicate
+the information from a web browser to server
+<form></form> is used to create a html form
+this tag has several attributes and among them are method and action 
+Method :-attribute specifies how thr entered data informed is send to destination there are two methods of sending information
+1.post:-in this method data is in visible while sending it provides security
+2.get (default):-in this method data is visible while sending and data is not secure
+Action:-this attribute specifies the url of this application 
+which is to be called when the user clicks the submit button
+placeholder:it act as a hint for an input field
+
+<label></label>
+-->
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+    <style>
+        body {
+          background-image: url("{% static 'flower.jpg' %}");
+          background-repeat: no-repeat;
+          background-size: 100% 700px;
+          background-attachment: fixed;
+        }
+        </style>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+    {% comment %} <p style="background-image: url('eye.png');"> {% endcomment %}
+   <center>
+       <h1>REGISTRATION FORM</h1>
+   <form method="post" action=""> {% csrf_token %}
+       <label> F-Name</label> 
+       <input type="text"  name="firstname" placeholder="first name" ><br> <br>
+       <label>l-Name</label>
+       <input type="text"  name="lastname" placeholder="last name" ><br> <br>
+       <label>username</label>
+       <input type="text" name="username" placeholder="username" ><br><br>
+       <label>Email</label>
+       <input type="email" name="email" placeholder="abcd@gmail.com"><br><br>
+       <label>Phone_No</label>
+       <input type="number" name="phone" placeholder="phone_number"><br><br>
+       <label>Gender</label>
+       <input type="radio" name="gender" value="female">Female 
+       <input type="radio" name="gender" value="male">Male<br><br>
+       <label>Address</label>
+       <textarea name="Address" rows="4" cols="20" placeholder="address"></textarea><br><br>
+       <label>DOB</label>
+       <input type="date" name="dob"><br><br>
+       <label>Password</label>
+       <input type="password" name="password" placeholder="password"><br><br>
+       <label>conf password</label>
+       <input type="password" name="confpassword" placeholder="password"><br><br>
+       
+      
+   
+       <input type="submit" value="Register">
+       <input type="reset">
+   </center>
+   </form>
+
+</body>
+</html>
+
+<!-- Attributes -->
+<!-- name:-the name attribute which is used as reference for the element
+after a form is submited -->
+<!--value:it specifies the value of an input field it used to set a default value
+it used differently for different input types for button it defined text on that button and for text password field etc.. it defines the default value  -->
+<!-- pattern attribute:- it used to aplly regular expression pattern -->
+<!-- read only:- it can't change by the user -->
+<!-- required:-it mention that field only required -->
+<!-- size attribute: -->
+<!-- rows and cols attribute -->
+<!--  -->
+
+{% comment %} csrf:-cross site request forgrey its an attack that forces authenticated users to submit request to web application
+for avoiding that we passes  a token into our html file{% endcomment %}

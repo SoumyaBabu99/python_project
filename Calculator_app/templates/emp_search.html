@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body bgcolor="yellow">
+        <form method="post">{% csrf_token %}
+        <center>
+        <h1>Employee Search</h1>
+        <label>Emp Name:</label>
+        <input type="text" name="empname" placeholder="Enter EMP name"><br><br>
+        <label>Phone No:</label>
+        <input type="number" name="phone" placeholder="Enter Phone No"><br><br>
+        <input type="submit" value="Search">
+       <input type="reset">
+        </center>
+    </form>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+{% comment %} Django orm that stands for object relational mapping it is used to intract with relational <i class="fa fa-database 
+in a simller manner it allowes to add modify delete a query object {% endcomment %}
